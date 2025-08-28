@@ -1,21 +1,92 @@
-# 📧 Envio de E-mails Personalizados com Python
+# Bots de Email – Automação de Relatórios de Vendas
 
-Este projeto é uma solução prática para automatizar o envio de e-mails personalizados com base em dados de um arquivo Excel. Ele utiliza o servidor SMTP do Gmail para realizar os disparos, com mensagens adaptadas dinamicamente de acordo com a meta e as vendas de cada funcionário.
+Projeto em **Python** para automatizar o envio de emails personalizados para vendedores, com base em suas vendas e metas. Utiliza **pandas** para manipulação de dados e **smtplib** para envio de emails.
 
-## 🚀 Funcionalidades
+---
 
-- **Automação de E-mails**: Leitura de dados diretamente de um arquivo Excel.
-- **Mensagens Personalizadas**: Conteúdo dinâmico para cada destinatário, formatado em HTML.
-- **Condições de Envio**:
-  - Parabenizar funcionários que atingiram ou superaram a meta.
-  - Motivar aqueles que não conseguiram atingir a meta.
+## Estrutura do Projeto
 
-## 🛠️ Stacks Utilizadas
+O projeto contém os seguintes arquivos:
 
-As principais tecnologias e bibliotecas utilizadas no projeto são:
+- `.gitignore` – arquivos e pastas ignorados pelo Git  
+- `app.py` – script principal que processa dados e envia emails  
+- `vendas.xlsx` – planilha com dados de vendas  
+- `LICENSE` – licença do projeto  
+- `README.md` – este arquivo  
+- `requirements.txt` – dependências do projeto  
 
-- **Python 3.10+**: Linguagem de programação.
-- **pandas**: Para manipulação de dados estruturados no Excel.
-- **openpyxl**: Suporte para leitura de arquivos Excel no formato `.xlsx`.
-- **smtplib**: Para comunicação com o servidor SMTP do Gmail.
-- **email.mime**: Para criação e envio de e-mails em texto e HTML.
+---
+
+## Tecnologias Utilizadas
+
+- Python – Linguagem principal do projeto  
+- pandas – Para leitura e manipulação de arquivos Excel  
+- smtplib – Envio de emails via SMTP  
+- email.mime – Formatação de emails HTML  
+- dotenv – Gerenciamento de variáveis de ambiente  
+
+---
+
+## Funcionalidades
+
+- Ler dados de vendas a partir de uma planilha Excel  
+- Calcular se cada vendedor atingiu ou não a meta  
+- Gerar emails HTML personalizados para cada situação:  
+  - Parabéns por atingir a meta  
+  - Incentivo para melhorar resultados  
+- Enviar emails automaticamente via Gmail ou outro servidor SMTP  
+
+---
+
+## Como Instalar
+
+1. Clone o repositório:  
+
+```
+git clone <URL_DO_REPOSITORIO>
+cd bots_email
+
+```
+
+2. Crie um ambiente virtual (opcional, mas recomendado):  
+
+```
+python -m venv venv
+venv\Scripts\activate # Windows
+source venv/bin/activate # Linux / Mac
+```
+
+3. Instale as dependências:  
+
+```
+pip install -r requirements.txt
+```
+
+4. Configure suas variáveis de ambiente no arquivo `.env`:  
+
+```
+EMAIL_USER=seu_email@gmail.com
+EMAIL_PASSWORD=sua_senha_de_app
+```
+
+> ⚠️ Recomenda-se usar **senha de app** para contas Gmail.
+
+5. Execute o bot:  
+
+```
+python app.py
+
+```
+
+---
+
+## Observações
+
+- Certifique-se de que a planilha `vendas.xlsx` contém as colunas: `Vendedor`, `Email`, `Periodo`, `Meta`, `Venda`  
+- O script envia emails para todos os registros na planilha, gerando mensagens personalizadas  
+
+---
+
+## Licença
+
+Este projeto está sob a **MIT License** – veja `LICENSE` para detalhes.
