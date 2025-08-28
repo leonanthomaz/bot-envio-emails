@@ -1,10 +1,10 @@
-# Bots de Email – Automação de Relatórios de Vendas
+# 📧 Bots de Email – Automação de Relatórios de Vendas
 
 Projeto em **Python** para automatizar o envio de emails personalizados para vendedores, com base em suas vendas e metas. Utiliza **pandas** para manipulação de dados e **smtplib** para envio de emails.
 
 ---
 
-## Estrutura do Projeto
+## 🗂 Estrutura do Projeto
 
 O projeto contém os seguintes arquivos:
 
@@ -17,7 +17,7 @@ O projeto contém os seguintes arquivos:
 
 ---
 
-## Tecnologias Utilizadas
+## 🛠 Tecnologias Utilizadas
 
 - Python – Linguagem principal do projeto  
 - pandas – Para leitura e manipulação de arquivos Excel  
@@ -27,7 +27,7 @@ O projeto contém os seguintes arquivos:
 
 ---
 
-## Funcionalidades
+## ⚡ Funcionalidades
 
 - Ler dados de vendas a partir de uma planilha Excel  
 - Calcular se cada vendedor atingiu ou não a meta  
@@ -80,7 +80,7 @@ python app.py
 
 ---
 
-## Observações
+## 📝 Observações
 
 - Certifique-se de que a planilha `vendas.xlsx` contém as colunas: `Vendedor`, `Email`, `Periodo`, `Meta`, `Venda`  
 - O script envia emails para todos os registros na planilha, gerando mensagens personalizadas  
